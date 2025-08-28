@@ -5,12 +5,11 @@ import connectDB from "./database/Db.js";
 const app=express();
 connectDB();
 const port=4000;
-
+app.use(express.json());
 
 
 app.use("/api/auth",route);
 
-app.use(express.json());
 
 
 app.listen(port,()=>{
